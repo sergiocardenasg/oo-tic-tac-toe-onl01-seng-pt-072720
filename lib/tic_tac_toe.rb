@@ -72,19 +72,13 @@ class TicTacToe
   end
 
   def winner
-    if over? && current_player == "X"
-      puts "Congratutions X"
-    else
+    if combo = won?
+      @board[combo[0]]
+    end
   end
 
-  # def winner
-  #   if combo = won?
-  #     @board[combo[0]]
-  #   end
-  # end
-
-  # def play
-  #   turn until over?
-  #   puts winner ? "Congratulations #{winner}!"
-  # end
+  def play
+    turn until over?
+    puts winner ? "Congratulations #{winner}!"
+  end
 end
