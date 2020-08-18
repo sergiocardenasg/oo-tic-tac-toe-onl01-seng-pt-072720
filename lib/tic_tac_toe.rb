@@ -64,10 +64,7 @@ class TicTacToe
   end
 
   def draw?
-    draw = false
-    if full? && won? == false
-      draw = true
-    end
+    full? && won?
   end
 
   def over?
@@ -78,6 +75,9 @@ class TicTacToe
   end
 
   def winner
+    if over? && current_player == "X"
+      puts "Congratutions X"
+    else
   end
 
   def play
