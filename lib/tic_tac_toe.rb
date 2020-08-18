@@ -71,14 +71,14 @@ class TicTacToe
     full? || won?
   end
 
-  def winner
-    if combo = won?
-      @board[combo[0]]
-    end
-  end
-
-  def play
-    turn until over?
-    puts winner ? "Congratulations #{winner}!"
-  end
+  # def winner
+  #   if combo = won?
+  #     @board[combo[0]]
+  #   end
+  # end
+  # 
+  # def play
+  #   turn until over?
+  #   puts winner ? "Congratulations #{winner}!"
+  # end
 end
