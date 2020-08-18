@@ -77,15 +77,14 @@ class TicTacToe
     else
   end
 
-  def play
-    if over? == false
-      turn
+  def winner
+    if index = won?
+      @board[index[0]]
     end
+  end
 
-    if won?
-      winner
-    elsif draw?
-      over
-    end
+  def play
+    turn until over?
+    puts winner ? "Congratulations #{winner}!" : "Cat's Game!"
   end
 end
