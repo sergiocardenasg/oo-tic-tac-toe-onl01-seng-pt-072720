@@ -87,7 +87,7 @@ class TicTacToe
 
     if won?
       winner
-    elsif draw?
+    else
       over
     end
 end
