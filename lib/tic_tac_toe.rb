@@ -52,9 +52,9 @@ class TicTacToe
   end
 
   def won?
-    WIN_COMBINATIONS.any? do |index|
-      if position_taken?(index[0]) && @board[index[0]] == @board[index[1]] && @board[index[1]] == @board[index[2]]
-        return index
+    WIN_COMBINATIONS.any? do |combo|
+      if position_taken?(combo[0]) && @board[combo[0]] == @board[combo[1]] && @board[combo[1]] == @board[combo[2]]
+        return combo
       end
     end
   end
@@ -78,8 +78,8 @@ class TicTacToe
   end
 
   def winner
-    if index = won?
-      @board[index[0]]
+    if combo = won?
+      @board[combo[0]]
     end
   end
 
