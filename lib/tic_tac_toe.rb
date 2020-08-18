@@ -76,10 +76,10 @@ class TicTacToe
       @board[combo[0]]
     end
   end
-  
+
   def play
     turn until over?
     puts winner ? "Congratulations #{winner}!"
   end
-  
+
 end
