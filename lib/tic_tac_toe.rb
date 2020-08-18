@@ -90,4 +90,5 @@ class TicTacToe
     else
       over
     end
+  end
 end
